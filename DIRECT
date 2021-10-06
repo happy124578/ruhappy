@@ -9,3 +9,4 @@ DOMAIN,safebrowsing.urlsec.qq.com,DIRECT
 DOMAIN,safebrowsing.googleapis.com,DIRECT
 DOMAIN-SUFFIX,baidu.com,DIRECT
 DOMAIN-SUFFIX,cnblogs.com,DIRECT
+DOMAIN-SUFFIX,ourbits.club,DIRECT
