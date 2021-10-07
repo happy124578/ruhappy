@@ -1,0 +1,45 @@
+[custom]
+;Rule set
+;Overwrite the existing rules in rule_base
+overwrite_original_rules=false
+
+;Perform a ruleset update on request
+update_ruleset_on_request=false
+
+;Ruleset addresses, supports local files/URL
+;Format: Group name,[type:]URL[,interval]
+;        Group name,[]Rule
+;where "type" supports the following value: surge, quanx, clash-domain, clash-ipcidr, clash-classic
+;type defaults to surge if omitted
+ruleset=🏴‍☠️ PT代理,https://raw.githubusercontent.com/happy124578/ruhappy/main/vpn
+ruleset=🎯 强行直连,https://raw.githubusercontent.com/happy124578/ruhappy/main/DIRECT
+ruleset=Ⓜ️ 微软服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Microsoft.list
+ruleset=📲 电报吹水,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Telegram.list
+ruleset=📘 推特相关,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Twitter.list
+ruleset=🍎 苹果服务,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Apple.list
+ruleset=🎮 Steam,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Steam.list
+ruleset=📺 巴哈姆特,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/Bahamut.list
+ruleset=📹 YouTube,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Ruleset/YouTube.list
+ruleset=🌍 国外媒体,https://github.com/LM-Firefly/Rules/raw/master/GlobalMedia.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/ChinaCompanyIp.list
+ruleset=DIRECT,https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Download.list
+ruleset=🐟 漏网之鱼,[]FINAL
+
+;Proxy groups
+;Generate Clash Proxy Group with the following patterns. Node filtering rule supports regular expression.
+;Format: Group_Name`select`Rule_1`Rule_2`...
+;        Group_Name`url-test|fallback|load-balance`Rule_1`Rule_2`...`test_url`interval[,timeout][,tolerance]
+;Rule with "[]" prefix will be added directly.
+custom_proxy_group=节点选择`select`.*
+custom_proxy_group=🐟 漏网之鱼`select`.*`[]节点选择
+custom_proxy_group=🌍 国外媒体`select`.*`[]节点选择
+custom_proxy_group=📹 YouTube`select`.*`[]节点选择
+custom_proxy_group=📺 巴哈姆特`select`.*`[]节点选择
+custom_proxy_group=🎮 Steam`select`.*`[]节点选择
+custom_proxy_group=🍎 苹果服务`select`.*`[]节点选择
+custom_proxy_group=📘 推特相关`select`.*`[]节点选择
+custom_proxy_group=📲 电报吹水`select`.*`[]节点选择
+custom_proxy_group=🎥 NETFLIX`select`.*`[]节点选择
+custom_proxy_group=Ⓜ️ 微软服务`select`.*`[]节点选择
+custom_proxy_group=🎯 强行直连`select`[]DIRECT
+custom_proxy_group=🏴‍☠️ PT代理`select`vmess
